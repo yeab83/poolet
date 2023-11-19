@@ -1,0 +1,73 @@
+@import '../../style/dashboard.scss';
+
+.transportation-container {
+  position: relative; // Set the position to relative to contain the pseudo-element
+  display: flex;
+  justify-content: space-between;
+  padding: 1px;
+  background-color: #176ad7;
+  align-items: center;
+  height: 300px;
+
+  // Pseudo-element for the background logo
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-left: -10px;
+    background-image: url('../../image/Pool_Logowh.png'); // Set the logo as a background image
+    background-repeat: no-repeat; // To prevent the logo from repeating
+    background-position: center; // To center the logo
+    background-size: contain; // To fit the logo within the container
+    opacity: 0.1; // Reduce the opacity of the logo
+    z-index: -0.1; // Place the logo behind the main content
+  }
+  .phone {
+    width: 900%; // This seems too large, you might want to adjust this
+    padding: 0px;
+    display: flex; // To make the content and images side by side
+    align-items: center; // To vertically center the content and images
+
+    h1 {
+      margin-top: 0;
+      margin-right: 20px; // To give some space between the heading and the images
+      color: #fff;
+      font-size: 50px;
+    }
+
+    p {
+      margin-right: 20px; // To give some space between the paragraph and the images
+      margin-top: -10px;
+      color: #fff;
+    }
+
+    img {
+      width: 50%; // To maintain the original width of the image
+      height: 500px; // You can adjust this based on your needs
+      margin-top: 0; // Removing the top margin
+
+      @include breakpoint(sm) {
+        display: none;
+      }
+    }
+
+    img + img {
+      // This targets the second image
+      margin-left: -270px; // This will reduce the gap between the two images
+      // @include breakpoints(sm) {
+      //   margin-left: -10px;
+      // }
+    }
+  }
+
+  .left-phone {
+    flex-direction: column; // To stack the heading and paragraph vertically
+  }
+
+  .right-phone {
+    flex-direction: row; // To place the images side by side
+  }
+}

@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,500;0,700;0,800;1,100;1,300;1,500;1,700&family=Roboto:ital,wght@0,100;0,700;1,100;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;400;700&display=swap');
+
+
+$Poppins:  'Signika', sans-serif;   
+
+
+//colors 
+$dark: #1D3124;
+$light: hsl(51, 44%, 94%);
+$primary: #3222c5;
+$secondary: #d71a62;
+$bg: rgb(244,244,255);
+
+//spacing
+
+$spacing-md: 10px;
+$spacing-lg: 32px;
+
+//fonts
+
+$sm-p: 12px;
+$md-p: 13px;
+$lg-p: 14px;
+
+$sm-tl: 20px;
+$md-tl: 25px;
+$lg-tl: 35px;
+
+
+//border radius
+
+$borderRadius: 12px;
+
+//header height
+$headerHeight: 70px;
+$dashHeaderHeight: 70px;
+
+//restaurant card width
+$restCardWidth: 345px;
+
+//mix
+
+@mixin breakpoint($point){
+    @if $point == sm{
+        //480px
+        @media(max-width: 480px){
+            @content
+        }
+    };
+
+    @if $point == md {
+        // 768px
+        @media (max-width: 780px){
+            @content;
+        }
+
+    }
+    @if $point == mdP {
+        @media (max-width: 920px){
+            @content
+        }
+    };
+    @if $point == lg{
+         // 1080px
+         @media(max-width: 1080px){
+            @content
+         }
+    };
+    @if $point == lgP{
+        //1200px
+        @media(max-width: 1900px){
+            @content
+        }
+    }
+}

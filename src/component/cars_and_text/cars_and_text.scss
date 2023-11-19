@@ -1,0 +1,339 @@
+@import '../../style/variable.scss';
+
+/* cars_and_text.scss */
+.new {
+  width: 100%;
+
+  .top {
+    text-align: center;
+  }
+
+  .wrapper {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    @include breakpoints(md) {
+      flex: 1; /* Half of the container width */
+      padding: 1rem;
+    }
+    @include breakpoints(lg) {
+      margin-left: 3rem;
+      margin-right: 5rem;
+    }
+
+    .carscontainer {
+      display: flex;
+      align-items: center;
+      height: 25rem;
+      width: 100%;
+      /* Add animation for scrolling */
+      animation: fade-in-up 1s ease-out;
+    }
+
+    /* Define the animation */
+    @keyframes fade-in-up {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ... rest of your styling ... */
+
+    .carsimage-half {
+      flex: 1;
+
+      @include breakpoints(lg) {
+        width: 60%;
+        margin-left: 16rem;
+      }
+    }
+
+    .cartext-half {
+      flex: 1;
+      h1 {
+        margin-right: 0;
+      }
+
+      .details {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+        .detail {
+          display: flex;
+          align-items: center;
+          margin-right: 20px;
+
+          .icon {
+            margin-right: 10px;
+          }
+        }
+      }
+
+      a {
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      p {
+        color: #777474;
+        font-size: 16px;
+        padding-top: -20px;
+        margin-bottom: 20px;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #176ad7;
+        color: white;
+        border: none;
+        border-radius: 50px; /* Make it oval */
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #ffdc01;
+        }
+      }
+    }
+  }
+}
+
+// @import '../../style/variable.scss';
+
+// /* cars_and_text.scss */
+// .new {
+//   width: 100%;
+
+//   .top {
+//     text-align: center;
+//   }
+
+//   .wrapper {
+//     margin-left: 2rem;
+//     margin-right: 2rem;
+//     @include breakpoints(md) {
+//       flex: 1; /* Half of the container width */
+//       padding: 1rem;
+//     }
+//     @include breakpoints(lg) {
+//       margin-left: 3rem;
+//       margin-right: 5rem;
+//     }
+
+//     .carscontainer {
+//       display: flex;
+//       align-items: center;
+//       height: 25rem;
+//       width: 100%;
+//       /* Add animation for scrolling */
+//       animation: fade-in-up 1s ease-out;
+//     }
+
+//     /* Define the animation */
+//     @keyframes fade-in-up {
+//       from {
+//         opacity: 0;
+//         transform: translateY(20px);
+//       }
+//       to {
+//         opacity: 1;
+//         transform: translateY(0);
+//       }
+//     }
+
+//     /* cars_and_text.scss */
+
+//     /* Default styles for desktop */
+//     .new {
+//       width: 100%;
+
+//       .top {
+//         text-align: center;
+//       }
+
+//       .wrapper {
+//         margin-left: 2rem;
+//         margin-right: 2rem;
+
+//         /* ... rest of your desktop styling ... */
+
+//         .carscontainer {
+//           display: flex;
+//           align-items: center;
+//           height: 25rem;
+//           width: 100%;
+//           /* ... animation styles ... */
+//         }
+
+//         /* ... rest of your styling ... */
+
+//         .carsimage-half {
+//           flex: 1;
+//           /* ... rest of your desktop styling ... */
+//         }
+
+//         .cartext-half {
+//           flex: 1;
+//           h1 {
+//             margin-right: 0;
+//           }
+
+//           /* ... rest of your desktop styling ... */
+
+//           .details {
+//             /* ... rest of your desktop styling ... */
+//           }
+
+//           a {
+//             /* ... rest of your desktop styling ... */
+//           }
+
+//           p {
+//             /* ... rest of your desktop styling ... */
+//           }
+
+//           .button {
+//             /* ... rest of your desktop button styling ... */
+//           }
+//         }
+//       }
+//     }
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  /* Mobile size */
+  .new {
+    .wrapper {
+      margin: 1rem;
+
+      .carscontainer {
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 2rem;
+        padding: 2rem 0;
+
+        .carsimage-half {
+          width: 100%;
+
+          margin: 0;
+          img {
+            width: 100%;
+          }
+        }
+
+        .cartext-half {
+          h1 {
+            font-size: 24px;
+          }
+
+          .details {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+
+            .detail {
+              margin-right: 0;
+            }
+          }
+
+          a {
+            font-size: 16px;
+          }
+
+          p {
+            font-size: 14px;
+            margin-bottom: 10px;
+          }
+
+          .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #176ad7;
+            color: white;
+            border: none;
+            border-radius: 50px; /* Make it oval */
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+              background-color: #ffdc01;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Tablet size */
+
+  .carsimage-half {
+    flex: 1;
+
+    @include breakpoints(lg) {
+      width: 60%;
+      margin-left: 16rem;
+    }
+  }
+
+  .cartext-half {
+    flex: 1;
+    h1 {
+      margin-right: 0;
+    }
+
+    .details {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+
+      .detail {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+
+        .icon {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    a {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    p {
+      color: #777474;
+      font-size: 16px;
+      padding-top: -20px;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #176ad7;
+      color: white;
+      border: none;
+      border-radius: 50px; /* Make it oval */
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #ffdc01;
+      }
+    }
+  }
+}

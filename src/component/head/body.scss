@@ -1,0 +1,120 @@
+@import '../../style/variable.scss';
+
+/* body.scss */
+.container {
+  display: flex;
+  align-items: center;
+  height: 35rem;
+  width: 100%;
+  background-color: #176ad7; /* Set a background color for the container */
+  @include breakpoints(md) {
+    display: flex;
+    align-items: center;
+    height: 35rem;
+    background-color: #176ad7;
+  }
+  @include breakpoints(lg) {
+    display: flex;
+    align-items: center;
+    height: 35rem;
+    background-color: #176ad7;
+  }
+
+  .image-half {
+    //   display: none;
+    flex: 0; /* Half of the container width */
+    padding: 1rem;
+    @include breakpoints(md) {
+      flex: 1; /* Half of the container width */
+      padding: 1rem;
+    }
+    @include breakpoints(lg) {
+      flex: 1; /* Half of the container width */
+      padding-left: 14rem;
+      width: 100%;
+    }
+
+    img {
+      width: 102.3%;
+      height: 35rem;
+      // display: block;
+    }
+  }
+  .wapper {
+    .text-half {
+      flex: 1; /* Half of the container width */
+      padding: 6rem;
+    }
+    p {
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+      @include breakpoints(md) {
+        font-size: 50px;
+        font-weight: bold;
+        color: #fff;
+      }
+      @include breakpoints(lg) {
+        font-size: 50px;
+        font-weight: bold;
+        color: #fff;
+      }
+    }
+    h4 {
+      color: #fff;
+      padding-bottom: -10px;
+    }
+  }
+
+  .logo-overlay {
+    position: absolute; /* Set the logo-overlay to absolute position */
+    top: 50%; /* Center the logo vertically */
+    left: 45%; /* Center the logo horizontally */
+    transform: translate(-50%, -50%); /* Center the logo perfectly */
+    width: 50%;
+    height: 50%;
+    background-image: url('../../image/Pool_Logowh.png'); /* Correct path to the transparentLogo.png image */
+    background-size: contain; /* Adjust the background image size as needed */
+    background-repeat: no-repeat;
+    background-position: center center; /* Center the logo image */
+    opacity: 0.2; /* Set the opacity of the transparent logo (0.3 for 30% opacity) */
+
+    @include breakpoints(md) {
+      position: absolute; /* Set the logo-overlay to absolute position */
+      top: 50%; /* Center the logo vertically */
+      left: 45%; /* Center the logo horizontally */
+      transform: translate(-50%, 50%); /* Center the logo perfectly */
+      width: 50%;
+      height: 30%;
+      background-image: url('../../image/Pool_Logowh.png'); /* Correct path to the transparentLogo.png image */
+      background-size: contain; /* Adjust the background image size as needed */
+      background-repeat: no-repeat;
+      background-position: center center; /* Center the logo image */
+      opacity: 0.2; /* Set the opacity of the transparent logo (0.3 for 30% opacity) */
+    }
+    @include breakpoints(lg) {
+      position: absolute; /* Set the logo-overlay to absolute position */
+      top: 50%; /* Center the logo vertically */
+      left: 45%; /* Center the logo horizontally */
+      transform: translate(-50%, 16%); /* Center the logo perfectly */
+      width: 50%;
+      height: 30%;
+      background-image: url('../../image/Pool_Logowh.png'); /* Correct path to the transparentLogo.png image */
+      background-size: contain; /* Adjust the background image size as needed */
+      background-repeat: no-repeat;
+      background-position: center center; /* Center the logo image */
+      opacity: 0.2; /* Set the opacity of the transparent logo (0.3 for 30% opacity) */
+    }
+  }
+  .store-link {
+    display: inline-block;
+    margin-right: 10px; /* Add spacing between the icons */
+  }
+
+  a img {
+    width: 100%; /* Adjust the width of the icons */
+    height: auto; /* Let the height scale automatically */
+    display: block;
+    margin-top: 5px; /* Add some spacing between the text and the icon */
+  }
+}

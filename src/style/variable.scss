@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,500;0,700;0,800;1,100;1,300;1,500;1,700&family=Roboto:ital,wght@0,100;0,700;1,100;1,300;1,400;1,500&family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&display=swap');
+$Poppins:  'Poppins', sans-serif;
+
+
+//colors 
+
+
+//spacing
+
+$spacing-md: 10px;
+$spacing-lg: 32px;
+
+//fonts
+
+$sm-p: 12px;
+$md-p: 13px;
+$lg-p: 14px;
+
+$sm-tl: 20px;
+$md-tl: 25px;
+$lg-tl: 35px;
+
+
+
+
+
+
+
+@mixin breakpoints($point){
+    @if $point == sm {
+         @media(min-width: 400px){
+            @content
+         }
+    };
+
+    @if $point == md {
+        @media(min-width: 780px){
+           @content
+        }
+   };@if $point == lg {
+    @media(min-width: 1080px){
+       @content
+    }
+}
+}

@@ -1,0 +1,100 @@
+@import '../../style/variable.scss';
+
+.header {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px; /* Add some padding for better appearance */
+  padding-right: 50px;
+  .logo {
+    display: flex; /* Display the logo and button in a row */
+    align-items: center; /* Align items vertically within .logo div */
+    gap: 10px; /* Add a 10px gap between the logo and button */
+    margin-left: 15px;
+
+    img {
+      height: 80px;
+      width: auto; /* Adjust the width to maintain aspect ratio */
+    }
+
+    button {
+      color: #fff;
+      background-color: transparent;
+      border: 1px solid #fff;
+      padding: 5px 10px;
+      cursor: pointer;
+      display: none; /* Hide the button by default on larger screens */
+    }
+  }
+
+  .phoneno img {
+    height: 0px;
+
+    @include breakpoints(md) {
+      height: 50px;
+    }
+    @include breakpoints(lg) {
+      height: 70px;
+    }
+  }
+
+  .header-nav {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: flex-end;
+
+      li {
+        margin-left: 18px; /* Add spacing between list items */
+        display: inline-block;
+        @include breakpoints(lg) {
+          margin-left: 50px;
+        }
+        &:hover {
+          background-color: #a4c2ea;
+          color: #fff;
+          padding: 3px; // Reset the padding
+          border-radius: 10px;
+        }
+
+        a {
+          color: #1c1c1c;
+          text-decoration: none;
+          font-size: 20px;
+        }
+      }
+    }
+
+    /* Media query for phone size (e.g., width <= 767px) */
+    @media (max-width: 800px) {
+      .logo {
+        button {
+          display: block; /* Show the button for mobile */
+        }
+      }
+
+      .header-nav ul {
+        display: none; /* Hide the menu list by default on mobile */
+      }
+
+      .show-mobile-menu .header-nav ul {
+        display: flex; /* Show the menu when the mobile icon is clicked */
+        flex-direction: column; /* Align menu items vertically */
+        align-items: center; /* Center menu items horizontally */
+        position: absolute;
+        top: 100%; /* Position the menu below the header */
+        left: 0;
+        width: 100%; /* Make the menu full width */
+        background-color: #176ad7; /* Set background color for the dropdown menu */
+        padding: 10px; /* Add padding for better appearance */
+
+        li {
+          margin: 10px 0; /* Add spacing between list items */
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,118 @@
+@import '../../style/dashboard.scss';
+
+/* styles.css */
+.driver-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #176ad7;
+  //   padding: 7rem;
+  padding-bottom: 5rem;
+  padding-left: 7rem;
+  padding-right: 7rem;
+  padding-top: 3rem;
+  color: #fff;
+  @include breakpoint(sm) {
+    padding-left: 6rem;
+    padding-right: 1rem;
+  }
+  .left-side {
+    flex: 1;
+    .photo-section {
+      flex: 1;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        @include breakpoint(sm) {
+          display: none;
+        }
+      }
+    }
+    .playestoredriver {
+      padding-left: 12rem;
+      padding-top: 5px;
+      @include breakpoint(sm) {
+        display: none;
+      }
+    }
+  }
+
+  .right-side {
+    flex: 1;
+    padding: 7rem;
+    background-color: white;
+    border-radius: 5px;
+    height: 35rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    @include breakpoint(sm) {
+      flex: 1;
+      padding: -1rem;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      height: 40rem;
+      width: 180%;
+    }
+    .driver-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      h2 {
+        margin: 0;
+        color: #000;
+        margin-bottom: 40px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 30px;
+      }
+
+      input {
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        font-size: 16px;
+      }
+      .radio-gender {
+        color: #000;
+        font-size: 20px;
+      }
+      textarea {
+        padding: 2rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+      button {
+        padding: 0.7rem;
+        width: 20%;
+        background-color: #176ad7;
+        color: #fff;
+        border: 1px solid #176ad7;
+        border-radius: 10px;
+        font-size: 14px;
+        cursor: pointer;
+        @include breakpoint(sm) {
+          width: 30%;
+        }
+      }
+      p {
+        color: #000;
+        text-align: right;
+        margin-top: -3rem;
+        font-size: 16px;
+        font-weight: bold;
+        @include breakpoint(sm) {
+          margin-top: -3rem;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
